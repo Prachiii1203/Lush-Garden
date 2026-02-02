@@ -385,7 +385,7 @@
 .card-img-4 {
     flex: 0 0 60%;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
 
@@ -1155,3 +1155,4 @@
         font-size: 30px;
     }
 }
+

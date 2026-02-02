@@ -20,10 +20,14 @@
     background-repeat: no-repeat;
 }
 
+.mobile-header {
+    display: none;
+}
+
 .header {
     width: 100%;
     position: absolute;
-    top: 20px;
+    /* top: 20px; */
     /* left: 30px; */
     display: flex;
     margin: 20px 0px;
@@ -33,7 +37,7 @@
 
 .logo img {
     height: 50px;
-    width: 100px
+    width: 100px;
 }
 
 .nav-menu {
@@ -365,6 +369,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    justify-content: center;
 }
 
 .card-img-1 {
@@ -453,7 +458,7 @@
     font-size: 32px;
     font-weight: 500;
     flex: 1;
-    padding: 0px 40px;
+    margin: 0px 40px;
 }
 
 .email {
@@ -495,7 +500,7 @@
 .blog-card {
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    align-items: normal;
     gap: 20px;
 }
 
@@ -504,6 +509,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    gap:20px;
 }
 
 .blog-img {
@@ -511,21 +517,21 @@
     height: 335px;
     border-radius: 15px;
     object-fit: cover;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .blog-heading {
     color: rgba(40, 90, 67, 1);
     font-weight: 900;
     font-size: 20px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .blog-flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .blog-readmore {
@@ -537,6 +543,8 @@
 .blog-date {
     font-size: 16px;
     color: gray;
+    display: flex;
+    align-items: center;
 }
 
 .footer {
@@ -678,7 +686,7 @@
     }
 
     .card-img-4 {
-        flex: 0 0 65%;
+        flex: 0 0 61%;
     }
 
     .card-img-4 img {
@@ -809,7 +817,7 @@
 
     .card-img-4 {
         /* width: 100%; */
-        flex: 0 0 64%;
+        flex: 0 0 63%;
         gap: 6px;
     }
 
@@ -918,11 +926,78 @@
     } */
 }
 
-@media (max-width:426px) {
+@media (max-width:425px) {
 
     .container {
         max-width: 425px;
         padding: 0 15px;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .mobile-header {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0px;
+        gap: 30px;
+        right: 5px;
+        left: 5px;
+        /* position: relative; */
+    }
+
+    .mobile-nav-link {
+        display: none;
+        /* position: absolute; */
+        z-index: 1;
+        top: 100%;
+        background-color: transparent;
+    }
+
+    .mobile-nav-menu ul li:hover {
+        background-color: rgba(114, 149, 114, 0.697);
+        color: white;
+    }
+
+    .mobile-nav-menu button {
+        color: white;
+        font-size: 18px;
+        background: transparent;
+        border: none;
+    }
+
+    .mobile-nav-menu:hover .mobile-nav-link {
+        display: block;
+        z-index: -1;
+    }
+
+    .mobile-nav-link ul {
+        padding: 0px;
+        border: 2px solid white;
+    }
+
+    .mobile-nav-link ul li {
+        padding: 5px 20px;
+        color: rgba(21, 30, 21, 0.697);
+
+    }
+
+    .mobile-border-btn {
+        background: transparent;
+        border: 2px solid white;
+        border-radius: 5px;
+        color: white;
+        font-weight: 700;
+        font-size: 14px;
+        padding: 8px 30px;
+    }
+
+    .mobile-logo img {
+        height: 40px;
+        width: 80px;
     }
 
     .section2-text {
@@ -962,18 +1037,17 @@
 
     .section5-image-card {
         flex-direction: column;
-        justify-content: baseline;
     }
 
     .card-img-1 {
         flex: 100%;
+        width: 100%;
     }
 
     .card-img-1 img {
-        flex: 100%;
-        object-fit: cover;
-        width: 100%;
         height: 330px;
+        object-fit: cover;
+        display: block;
     }
 
     .card-img-4 {
@@ -1000,6 +1074,11 @@
         gap: 20px;
     }
 
+    .section2-card div:nth-child(odd), .section2-card div:nth-child(even) {
+        box-shadow: none;
+        border-bottom: 2px solid #383c3b7d;
+    }
+
     .section7 {
         flex-direction: column;
         align-items: baseline;
@@ -1008,7 +1087,7 @@
 
     .section7 p {
         font-size: 24px;
-        padding: 0px;
+        margin: 0px;
     }
 
     .email {
